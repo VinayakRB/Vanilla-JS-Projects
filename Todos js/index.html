@@ -12,29 +12,33 @@
     <div class="container">
 
         <header class="text-center text-light my-4">
-          <h1 class="mb-4">Todo List</h1>
-          <form class="search">
-            <input class="form-control m-auto" type="text" name="search" placeholder="Search Todos" />
-          </form>
+            <div class="header-wrapper d-flex justify-content-around align-items-center">
+                <i class="heading fa fa-bolt"></i>
+                <h1 class="heading mb-4">TODO LIST</h1>
+                <i class="heading fa fa-bolt"></i>
+            </div>
+            <form class="search">
+                <input class="form-control m-auto" type="text" name="search" placeholder="Search Todos" />
+            </form>
         </header>
 
         <ul class="list-group todos mx-auto text-light">
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span>Add a new Todo by typing below.</span>
+              <span>Add a new Todo by typing below</span>
               <i class="far fa-trash-alt delete"></i>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span>Delete a Todo by clicking on Trash icon.</span>
+              <span>Click on Trash icon to delete a Todo</span>
               <i class="far fa-trash-alt delete"></i>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span>Search for a Todo in the Search bar above.</span>
+              <span>Search for a Todo in the Search bar above</span>
               <i class="far fa-trash-alt delete"></i>
             </li>
           </ul>
 
           <form class="add text-center my-4">
-            <label class="text-light">Add a new todo...</label>
+            <label class="text-primary">Add a new todo...</label>
             <input class="form-control m-auto" type="text" name="add" />
           </form>
 
