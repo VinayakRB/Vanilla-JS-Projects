@@ -9,8 +9,6 @@ const updateUI = data => {
 
     // destructure properties
     const { cityDet, weather, wall } = data;
-    // console.log(data);
-
     //update details template
     details.innerHTML = `
                 <h5 class="my-3">${cityDet.EnglishName}</h5>
@@ -47,7 +45,7 @@ const updateUI = data => {
     background.classList.add('background-animation');
     setTimeout(() => {
         background.classList.remove('background-animation');
-    }, 2000);
+    }, 2500);
     
 
     //remove display: none if exists

@@ -3,8 +3,7 @@ const unsplashKey = `XNd65LYzvptj0MsGNFU6BGF8WlfMXTlqqn5KmfbUg2o`;
 
 
 const getWall = async (city) => {
-    const cityStreet = `${city} streets`;
-    console.log(cityStreet);
+    const cityStreet = `${city} architecture`;
     const base = `https://api.unsplash.com/search/photos`;
     const query = `?client_id=${unsplashKey}&page=1&query=${cityStreet}&orientation=landscape`;
 
