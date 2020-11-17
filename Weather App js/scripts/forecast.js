@@ -1,4 +1,17 @@
-const key = `GgRyM1amIShQxr04uU7lN50rc0sMqOwE`;
+const key = `HrIQi1vzCx2J7Dp0zrGJsHeF05EaEZFf`;
+const unsplashKey = `XNd65LYzvptj0MsGNFU6BGF8WlfMXTlqqn5KmfbUg2o`;
+
+
+const getWall = async (city) => {
+    const cityStreet = `${city} streets`;
+    console.log(cityStreet);
+    const base = `https://api.unsplash.com/search/photos`;
+    const query = `?client_id=${unsplashKey}&page=1&query=${cityStreet}&orientation=landscape`;
+
+    const response = await fetch(base+query);
+    const data = await response.json();
+    return data.results[0];
+}
 
 // get weather information 
 const getWeather = async (id) => {
@@ -20,17 +33,3 @@ const getCity = async (city) => {
     return data[0];
 };
 
-// const test = getCity(`London`)
-//     .then(data => {
-//         // console.log(data.Key);
-//        return getWeather(data.Key);
-//     })
-//     .then(data => {
-//         // console.log(data);
-//         return data;
-//     })
-//     .catch(err => {
-//         console.log(err);
-//     });
-
-// console.log(test);

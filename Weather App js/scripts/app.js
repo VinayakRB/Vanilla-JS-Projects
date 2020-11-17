@@ -3,12 +3,13 @@ const card = document.querySelector(`.card`);
 const details = document.querySelector(`.details`);
 const time = document.querySelector(`img.time`);
 const icon = document.querySelector(`.icon img`);
+const background = document.querySelector(`.custom-background`);
 
 const updateUI = data => {
 
     // destructure properties
-    const { cityDet, weather } = data;
-    console.log(data);
+    const { cityDet, weather, wall } = data;
+    // console.log(data);
 
     //update details template
     details.innerHTML = `
@@ -24,11 +25,30 @@ const updateUI = data => {
     const iconSource = `img/icons/${weather.WeatherIcon}.svg`;
     icon.setAttribute(`src`, iconSource);
 
-    let timeSource = weather.IsDayTime
-                    ? timeSource = `img/day.svg`
-                    : timeSource = `img/night.svg`;
+    let timeSource = null;
+    
+    weather.IsDayTime
+    ? timeSource = `img/day.svg`
+    : timeSource = `img/night.svg`;
 
     time.setAttribute(`src`, timeSource);
+
+    //update background
+    const wallUrl = wall.urls.regular;
+
+    background.style.cssText = `
+    background: url("${wallUrl}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    `;
+
+    //add animation
+    background.classList.add('background-animation');
+    setTimeout(() => {
+        background.classList.remove('background-animation');
+    }, 2000);
+    
 
     //remove display: none if exists
     if(card.classList.contains(`d-none`)) {
@@ -40,8 +60,9 @@ const updateCity = async (city) => {
     // console.log(city);
     const cityDet = await getCity(city);
     const weather = await getWeather(cityDet.Key);
+    const wall = await getWall(cityDet.EnglishName);
 
-    return { cityDet, weather };
+    return { cityDet, weather, wall };
 };
 
 cityForm.addEventListener(`submit`, e => {
