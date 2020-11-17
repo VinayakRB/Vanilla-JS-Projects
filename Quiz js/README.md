@@ -1,2 +1,4 @@
 Simple Quiz made using Javascript.
-Bootstrap used for styling.
+
+-Written in Javascript and HTML
+-Styled using Bootstrap and custom CSS.
