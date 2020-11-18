@@ -4,10 +4,9 @@ const details = document.querySelector(`.details`);
 const time = document.querySelector(`img.time`);
 const icon = document.querySelector(`.icon img`);
 const background = document.querySelector(`.custom-background`);
+const forecast = new Forecast();
 
 const updateUI = data => {
-
-    // destructure properties
     const { cityDet, weather, wall } = data;
     //update details template
     details.innerHTML = `
@@ -18,61 +17,44 @@ const updateUI = data => {
                     <span>&deg;C</span>
                 </div>
     `;
-
     //update nigt and day images and icons
     const iconSource = `img/icons/${weather.WeatherIcon}.svg`;
     icon.setAttribute(`src`, iconSource);
 
     let timeSource = null;
-    
     weather.IsDayTime
     ? timeSource = `img/day.svg`
     : timeSource = `img/night.svg`;
-
     time.setAttribute(`src`, timeSource);
 
     //update background
-    const wallUrl = wall.urls.regular;
-
+    const wallUrl = wall[0].urls.regular;
     background.style.cssText = `
     background: url("${wallUrl}");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     `;
-
     //add animation
-    background.classList.add('background-animation');
+    if(wall[1] === 200) {
+        background.classList.add('background-animation');
     setTimeout(() => {
         background.classList.remove('background-animation');
     }, 2500);
-    
+    }
 
-    //remove display: none if exists
     if(card.classList.contains(`d-none`)) {
         card.classList.remove(`d-none`);
     }
 }
 
-const updateCity = async (city) => {
-    // console.log(city);
-    const cityDet = await getCity(city);
-    const weather = await getWeather(cityDet.Key);
-    const wall = await getWall(cityDet.EnglishName);
-
-    return { cityDet, weather, wall };
-};
-
 cityForm.addEventListener(`submit`, e => {
-    //prevent default
     e.preventDefault();
-
-    //get city
     const city = cityForm.city.value.trim();
     cityForm.reset();
 
     //update ui with city
-    updateCity(city)
+    forecast.updateCity(city)
         .then(data => updateUI(data))
         .catch(err => console.log(err));
 
@@ -81,9 +63,7 @@ cityForm.addEventListener(`submit`, e => {
 });
 
 if(localStorage.getItem('city')) {
-    updateCity(localStorage.getItem('city'))
+    forecast.updateCity(localStorage.getItem('city'))
         .then(data => updateUI(data))
         .catch(err => console.log(err));
 }
-
-console.log(localStorage.getItem('city'));
