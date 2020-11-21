@@ -38,6 +38,7 @@ class chatRoom {
   }
   updateName(username) {
     this.username = username;
+    localStorage.setItem('username', username);
   }
   updateRoom(room) {
     this.room = room;
@@ -49,17 +50,17 @@ class chatRoom {
 
 }
 
-const chatroom = new chatRoom('general', 'shaon');
+// const chatroom = new chatRoom('general', 'shaon');
 
-chatroom.getChats(data => {
-  console.log(data);
-});
+// chatroom.getChats(data => {
+//   console.log(data);
+// });
 
-setTimeout(() => {
-  chatroom.updateRoom('gaming');
-  chatroom.updateName('kaneki');
-  chatroom.getChats(data => {
-    console.log(data);
-  });
-  chatroom.addChat('By kaneki');
-}, 3000)
+// setTimeout(() => {
+//   chatroom.updateRoom('gaming');
+//   chatroom.updateName('kaneki');
+//   chatroom.getChats(data => {
+//     console.log(data);
+//   });
+//   chatroom.addChat('By kaneki');
+// }, 3000)
