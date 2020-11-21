@@ -3,8 +3,18 @@ const chatList = document.querySelector('.chat-list');
 const newChat = document.querySelector('.new-chat');
 const newName = document.querySelector('.new-name');
 const updateMsg = document.querySelector('.update-mssg');
+const rooms = document.querySelector('.chat-rooms');
 
-//show then hide update message
+//update chat room
+rooms.addEventListener('click', e => {
+  if(e.target.tagName === 'BUTTON') {
+    chatUI.clear();
+    chatroom.updateRoom(e.target.getAttribute('id'));
+    chatroom.getChats(chat => {
+      chatUI.render(chat);
+    })
+  }
+});
 
 //add a new name
 newName.addEventListener('submit', e => {
@@ -13,6 +23,7 @@ newName.addEventListener('submit', e => {
   chatroom.updateName(updName);
   newName.reset();
   updateMsg.textContent = `Your name was updated to ${updName}`;
+  //show then hide update message
   setTimeout(() => {
     updateMsg.textContent = ``;
   },3000)
@@ -36,7 +47,6 @@ const chatUI = new ChatUI(chatList);
 const username = localStorage.username ? localStorage.username : 'anonymous';
 
 const chatroom = new chatRoom('gaming', username);
-
 
 // get chats and render
 chatroom.getChats(data => {
