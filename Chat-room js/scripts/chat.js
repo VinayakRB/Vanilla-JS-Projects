@@ -1,7 +1,4 @@
-// adding chat documents
-// setting up real time listener to get new chats
-// updating the username
-// updating the room
+// firebase data operations
 
 class chatRoom {
   constructor(room, username) {
@@ -49,18 +46,3 @@ class chatRoom {
   }
 
 }
-
-// const chatroom = new chatRoom('general', 'shaon');
-
-// chatroom.getChats(data => {
-//   console.log(data);
-// });
-
-// setTimeout(() => {
-//   chatroom.updateRoom('gaming');
-//   chatroom.updateName('kaneki');
-//   chatroom.getChats(data => {
-//     console.log(data);
-//   });
-//   chatroom.addChat('By kaneki');
-// }, 3000)

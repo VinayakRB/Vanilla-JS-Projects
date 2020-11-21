@@ -9,6 +9,7 @@ const rooms = document.querySelector('.chat-rooms');
 rooms.addEventListener('click', e => {
   if(e.target.tagName === 'BUTTON') {
     chatUI.clear();
+    // chatUI.roomUI(chatroom.room);
     chatroom.updateRoom(e.target.getAttribute('id'));
     chatroom.getChats(chat => {
       chatUI.render(chat);
@@ -40,13 +41,12 @@ newChat.addEventListener('submit', e => {
     .catch(err => console.log(err));
 });
 
-// class instances
-const chatUI = new ChatUI(chatList);
-
 //check localstorage by name
 const username = localStorage.username ? localStorage.username : 'anonymous';
 
-const chatroom = new chatRoom('gaming', username);
+// class instances
+const chatUI = new ChatUI(chatList);
+const chatroom = new chatRoom('general', username);
 
 // get chats and render
 chatroom.getChats(data => {

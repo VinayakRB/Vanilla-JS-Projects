@@ -19,4 +19,7 @@ class ChatUI {
 
     this.list.innerHTML += html;
   }
+  // roomUI(roomName) {
+
+  // }
 }
