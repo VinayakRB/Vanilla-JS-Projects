@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <style>
-    body { font-size: 1.5em;}
+    body { font-size: 1.5em; font-family: sans-serif;}
     .container { margin: 40px; margin-top: 60px;}
   </style>
   <title></title>
@@ -31,6 +31,25 @@
     </div>
     <h2>More Information</h2>
     <!--tabbed content-->
+    <div class="tabs">
+      <ul>
+        <li class="trigger active" data-target="#about">About</li>
+        <li class="trigger" data-target="#delivery">Delivery Info</li>
+        <li class="trigger" data-target="#returns">Returns Info</li>
+      </ul>
+      <div class="content active" id="about">
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum tenetur laboriosam aliquid? Impedit officia recusandae delectus accusantium! Dolorum, laborum nam!</p>
+      </div>
+      <div class="content" id="delivery">
+        <h3>Delivery</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum tenetur laboriosam aliquid? Impedit officia recusandae delectus accusantium! Dolorum, laborum nam!</p>
+      </div>
+      <div class="content" id="returns">
+        <h3>Returns</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum tenetur laboriosam aliquid? Impedit officia recusandae delectus accusantium! Dolorum, laborum nam!</p>
+      </div>
+    </div>
   </div>
 
   <script src="assets/bundle.js"></script>
