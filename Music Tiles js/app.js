@@ -4,6 +4,8 @@ const keys = document.querySelectorAll('.audio-tile');
 function playSound(e) {
   audio.forEach(avf => {
     if(e.keyCode == avf.getAttribute('data-code')) {
+      avf.currentTime = 0;
+      avf.play();
       avf.parentElement.classList.add('playing');
     }
     else return;
