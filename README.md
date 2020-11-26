@@ -1,5 +1,7 @@
 # Vanilla-JS-Projects
 
+NOTE: Navigate to branches to see all projects
+
 Mini Projects developed using Vanilla JS
 
 1. Quiz
