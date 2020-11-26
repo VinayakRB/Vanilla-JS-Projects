@@ -1,0 +1,56 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background: url('img/background2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  height: 90vh;
+  display: flex;
+}
+
+.tiles-wrapper {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.audio-tile {
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  color: white;
+  background: rgba(255, 255, 255, 0.158);
+  box-shadow:  0 0 5px white;
+  transition: all 0.07s;
+}
+
+.tiles-wrapper div span {
+  align-self: center;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.playing {
+  transform: scale(1.1);
+  background: transparent;
+  border: 3px solid rgb(0, 255, 234);
+  color: rgb(0, 255, 234);
+  box-shadow: 0 0 5px rgb(0, 255, 234);
+}
