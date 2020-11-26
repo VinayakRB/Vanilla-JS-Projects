@@ -1,8 +1,5 @@
-# Vanilla-JS-Projects
+#5 Music Tiles Project
 
-Mini Projects developed using Vanilla JS
-
-1. Quiz
-2. Todo List
-3. Weather App
-4. Discord like Chat Room
+1. Plays a sound tune on pressing any key from A-L in qwertyuiop format.
+2. Simple use of javascript first class functions and eventListener. 
+3. Languages used: JS-HTML-CSS
