@@ -10,3 +10,5 @@ Mini Projects developed using Vanilla JS
 4. Discord like Chat Room
 5. UI Library
 6. Music Tiles
+7. Flexbox Image Gallery
+8. Location Type Ahead
