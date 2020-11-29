@@ -1,12 +1,6 @@
-# Vanilla-JS-Projects
+# Location Type Ahead Form
 
-NOTE: Navigate to branches to see all projects
+A responsive form that displays a list of locations as the user types.
 
-Mini Projects developed using Vanilla JS
-
-1. Quiz
-2. Todo List
-3. Weather App
-4. Discord like Chat Room
-5. UI Library
-6. Music Tiles
+1. Sample json data fetched from github
+2. Used JS-HTML-CSS
