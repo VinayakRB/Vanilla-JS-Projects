@@ -36,5 +36,5 @@ class Gallery {
 }
 
 const obj = new Gallery();
-obj.onClick();
-// obj.onHover();
+// obj.onClick();
+obj.onHover();
