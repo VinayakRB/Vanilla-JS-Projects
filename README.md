@@ -12,3 +12,4 @@ Mini Projects developed using Vanilla JS
 6. Music Tiles
 7. Flexbox Image Gallery
 8. Location Type Ahead
+9. Color Canvas
