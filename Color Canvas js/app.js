@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 ctx.strokeStyle = '#000';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 10;
+ctx.lineWidth = 15;
 ctx.globalCompositeOperation = 'lighten';
 
 let hue = 0;
@@ -28,7 +28,7 @@ function draw(e) {
   [startX, startY] = [e.offsetX, e.offsetY];
 
   hue >= 360 ? hue = 0 : hue++;
-  if(ctx.lineWidth >= 50 || ctx.lineWidth <= 1) {direction = !direction;}
+  if(ctx.lineWidth >= 60 || ctx.lineWidth <= 1) {direction = !direction;}
   direction ? ctx.lineWidth++ : ctx.lineWidth--;
 };
 
