@@ -13,3 +13,4 @@ Mini Projects developed using Vanilla JS
 7. Flexbox Image Gallery
 8. Location Type Ahead
 9. Color Canvas
+10. Select Multiple Checkboxes
