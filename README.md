@@ -14,3 +14,4 @@ Mini Projects developed using Vanilla JS
 8. Location Type Ahead
 9. Color Canvas
 10. Select Multiple Checkboxes
+11. Custom HTML5 Video Player
