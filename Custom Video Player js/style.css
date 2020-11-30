@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -10,12 +12,23 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background: #7A419B;
   min-height: 100vh;
-  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   background-size: cover;
   align-items: center;
   justify-content: center;
+}
+.title {
+  position: absolute;
+  font-size: 4.5em;
+  font-weight: 500;
+  font-family: 'Staatliches', sans-serif;
+  color: white;
+  letter-spacing: 5px;
+  
+  text-align: center;
+  top: 5%;
 }
 
 .player {
