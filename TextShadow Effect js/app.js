@@ -1,6 +1,6 @@
 const hero = document.querySelector(`.hero`);
 const text = document.querySelector(`h1`);
-const shadow = 20;
+const shadow = 30;
 
 function shadowEffect(e) {
   const {offsetWidth: width, offsetHeight: height} = hero;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 html {
   color: black;
   font-family: sans-serif;
@@ -20,8 +22,10 @@ body {
 
 h1 {
   text-shadow: 10px 10px 0 rgba(0, 0, 0, 0.349);
-  font-size: 100px;
+  font-family: 'Bangers', sans-serif;
+  font-size: 8rem;
   font-weight: 700;
+  letter-spacing: 10px;
   text-align: center;
   transform: rotateZ(-15deg);
 }
