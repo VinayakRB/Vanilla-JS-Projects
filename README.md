@@ -17,3 +17,4 @@
 11. **Custom HTML5 Video Player**
 12. Text Shadow Effect
 13. **Native Speech Recognition**
+14. **Text-to-Speech Output**
