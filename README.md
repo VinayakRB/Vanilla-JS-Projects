@@ -15,3 +15,4 @@ Mini Projects developed using Vanilla JS
 9. Color Canvas
 10. Select Multiple Checkboxes
 11. Custom HTML5 Video Player
+12. Text Shadow Effect
