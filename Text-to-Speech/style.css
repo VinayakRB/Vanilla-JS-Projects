@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightcoral;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+
+  background-size:100px 50px;
+}
+
+.speech-engine {
+  padding: 2rem;
+  width: 50rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  width: calc(100% + 4rem);
+  margin: -2rem 0 2rem -2rem;
+  padding: .5rem;
+  background: #ffc600;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: 'Staatliches',sans-serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.speech-engine label {
+  font-size: 15px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.speech-engine input,
+.speech-engine button,
+.speech-engine select,
+.speech-engine textarea {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 0;
+  font-size: 2rem;
+  background: #F7F7F7;
+  outline: 0;
+}
+
+textarea {
+  height: 20rem;
+}
+
+/* input[type="select"] {
+
+} */
+
+.speech-engine button {
+  background: #ffc600;
+  border: 0;
+  width: 49%;
+  float: left;
+  font-family: 'Staatliches',sans-serif;
+  margin-bottom: 0;
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.speech-engine button:active {
+  top: 2px;
+}
+
+.speech-engine button:nth-of-type(1) {
+  margin-right: 2%;
+}

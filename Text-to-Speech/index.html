@@ -7,6 +7,29 @@
   <title>Text-to-Speech Output</title>
 </head>
 <body>
+  <div class="speech-engine">
+
+    <h1>~~ Speech Engine ~~</h1>
+
+    <select name="voice" id="voices">
+      <option value="">Select a Voice</option>
+    </select>
+
+    <div class="flex-wrapper">
+      <label for="rate">RATE:</label>
+      <input name="rate" type="range" min="0" max="2" value="1" step="0.1">
+    </div>
+
+    <div class="flex-wrapper">
+      <label for="pitch">PITCH:</label>
+      <input name="pitch" type="range" min="0" max="2" step="0.1">
+    </div>
+
+    <textarea name="text">Welcome to Shinobi World</textarea>
+    <button id="stop">Stop!</button>
+    <button id="speak">Speak</button>
+
+  </div>
   
   <script src="app.js"></script>
 </body>
