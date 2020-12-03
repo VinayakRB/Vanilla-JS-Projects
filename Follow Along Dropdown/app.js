@@ -6,6 +6,7 @@ function handleEnter() {
   // console.log(`Enter`);
   this.classList.add('hovered');
   setTimeout(() => this.classList.contains('hovered') && this.classList.add('hover-active'), 150);
+  background.classList.add('open');
 
   const dropdown = this.querySelector('.dropdown');
   const listCords = dropdown.getBoundingClientRect();
@@ -19,10 +20,8 @@ function handleEnter() {
   background.style = `
   width: ${backgroundCords.width}px;
   height: ${backgroundCords.height}px;
-  top: ${backgroundCords.y}px;
-  left: ${backgroundCords.x}px;
+  transform: translate(${backgroundCords.x}px, ${backgroundCords.y}px);
   `;
-  background.classList.add('open');
 }
 function handleLeave() {
   this.classList.remove('hovered', 'hover-active');
