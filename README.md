@@ -18,3 +18,4 @@
 12. Text Shadow Effect
 13. **Native Speech Recognition**
 14. **Text-to-Speech Output**
+15. **Sticky Navigation Bar**
