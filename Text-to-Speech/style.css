@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: url("img/background.jpg");
+  background: rgba(255, 255, 255, 0.13);
   display: flex;
   min-height: 100vh;
   align-items: center;
@@ -37,7 +37,7 @@ h1 {
   width: calc(100% + 4rem);
   margin: -2rem 0 2rem -2rem;
   padding: .5rem;
-  background: #3e37c9f1;
+  background: linear-gradient(90deg, #1A2980, #26D0CE);
   color: white;
   text-align: center;
   font-size: 5rem;
@@ -81,8 +81,8 @@ textarea {
 } */
 
 .speech-engine button {
-  background: #3e37c9f1;
-  color: white;
+  background: #26D0CE;
+  color: black;
   border: 0;
   border-radius: 5px;
   width: 49%;
