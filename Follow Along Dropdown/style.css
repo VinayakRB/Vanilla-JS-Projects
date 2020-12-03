@@ -84,7 +84,6 @@ nav ul {
   width: 100px;
   height: 100px;
   position: absolute;
-  /* background: rgb(240, 179, 179); */
   background: white;
   border-radius: 4px;
   border-top-left-radius: 0;
@@ -106,7 +105,6 @@ nav ul {
   width: 20px;
   height: 20px;
   display: block;
-  /* background: rgb(240, 179, 179); */
   background: white;
   transform: translateY(-50%) rotate(45deg);
 }
@@ -150,7 +148,6 @@ a.button {
   border-radius: 5px;
 }
 
-/* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
 .button[href*=twitter] { background: #019FE9; }
 .button[href*=facebook] { background: #3B5998; }
 .button[href*=instagram] { background: #9c9c9c; }

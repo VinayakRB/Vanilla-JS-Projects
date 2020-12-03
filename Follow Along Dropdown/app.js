@@ -3,7 +3,6 @@ const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.top');
 
 function handleEnter() {
-  // console.log(`Enter`);
   this.classList.add('hovered');
   setTimeout(() => this.classList.contains('hovered') && this.classList.add('hover-active'), 150);
   background.classList.add('open');
@@ -27,8 +26,6 @@ function handleLeave() {
   this.classList.remove('hovered', 'hover-active');
   background.classList.remove('open');
 }
-
-
 triggers.forEach(trigger => {
   trigger.addEventListener('mouseenter', handleEnter);
   trigger.addEventListener('mouseleave', handleLeave);
